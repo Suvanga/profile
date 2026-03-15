@@ -1,6 +1,9 @@
 import { motion } from 'motion/react';
 import { ExternalLink, Github, Sparkles, DollarSign, TrendingUp, Brain, Bell, ShieldCheck } from 'lucide-react';
-
+// @ts-ignore
+import finalPresentation from '../assets/Final_presentation.pdf';
+import Final from '../assets/Final.pdf';
+import Working from '../assets/Working.png'
 export function EnhancedProjectsSection() {
  const projects = [
     {
@@ -16,7 +19,7 @@ export function EnhancedProjectsSection() {
       ],
       tags: ['Node.js', 'MongoDB', 'Auth0', 'OpenAI API', 'OCR', 'Express.js'],
       link: 'https://github.com/Suvanga/moneymate',
-      demoLink: 'https://github.com/Suvanga/moneymate', // Update this if you have a live demo URL
+      demoLink: finalPresentation, // Points to your PDF!
       secondaryActionText: 'View Final Project',
       gradient: 'from-green-600 to-emerald-600',
       glowColor: 'rgba(16, 185, 129, 0.4)'
@@ -52,7 +55,7 @@ export function EnhancedProjectsSection() {
       ],
       tags: ['Python', 'PyTorch', 'LLMs', 'Computer Vision', 'RAG', 'Healthcare AI'],
       link: 'https://github.com/Suvanga/deepcls',
-      demoLink: 'https://github.com/Suvanga/deepcls', // Update this if you have a live demo URL
+      demoLink: Working, 
       secondaryActionText: 'View Workflow',
       gradient: 'from-blue-600 to-cyan-600',
       glowColor: 'rgba(59, 130, 246, 0.4)'
@@ -69,7 +72,7 @@ export function EnhancedProjectsSection() {
         'C++ firmware for embedded systems with minimal latency requirements'
       ],
       tags: ['IoT', 'C++', 'Cloud Integration', 'Real-Time Systems', 'Hardware'],
-      link: 'https://github.com/Suvanga/Silent_Bell',
+      link: 'https://github.com/Suvanga/Silent_Bell/blob/main/EECS%204020%20Final.pptx.pdf',
       demoLink: 'https://www.youtube.com/shorts/BbaNTW-YIa0',
       secondaryActionText: 'View Working Demo',
       gradient: 'from-orange-600 to-yellow-600',
@@ -88,12 +91,13 @@ export function EnhancedProjectsSection() {
       ],
       tags: ['React', 'Machine Learning', 'Healthcare AI', 'Medical Imaging'],
       link: 'https://github.com/Suvanga/Mediscan',
-      demoLink: 'https://xray.suvanga.com',
+      demoLink: 'https://xrayai.suvanga.com',
       secondaryActionText: 'Try it',
       gradient: 'from-teal-500 to-emerald-500',
       glowColor: 'rgba(20, 184, 166, 0.4)'
     }
   ];
+
   return (
     <section id="projects" className="py-24 px-4 sm:px-6 relative overflow-hidden">
       {/* Animated background elements */}
@@ -269,7 +273,8 @@ export function EnhancedProjectsSection() {
                         <ExternalLink className="w-4 h-4" />
                         {project.secondaryActionText}
                       </motion.a>
-                    </div>                 </div>
+                    </div>                 
+                  </div>
                 </motion.div>
               </motion.div>
             );
