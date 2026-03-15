@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { ExternalLink, Github, Sparkles, DollarSign, TrendingUp, Brain, Bell, ShieldCheck } from 'lucide-react';
 
 export function EnhancedProjectsSection() {
-  const projects = [
+ const projects = [
     {
       title: 'MoneyMate',
       subtitle: 'FinTech Data Pipeline with AI',
@@ -16,6 +16,8 @@ export function EnhancedProjectsSection() {
       ],
       tags: ['Node.js', 'MongoDB', 'Auth0', 'OpenAI API', 'OCR', 'Express.js'],
       link: 'https://github.com/Suvanga/moneymate',
+      demoLink: 'https://github.com/Suvanga/moneymate', // Update this if you have a live demo URL
+      secondaryActionText: 'View Final Project',
       gradient: 'from-green-600 to-emerald-600',
       glowColor: 'rgba(16, 185, 129, 0.4)'
     },
@@ -31,7 +33,9 @@ export function EnhancedProjectsSection() {
         'Optimized component re-renders and local storage for seamless UX'
       ],
       tags: ['React', 'Vite', 'OpenAI API', 'Data Visualization', 'Local Storage'],
-      link: 'https://github.com/Suvanga/Application_Every_3_Days/tree/main/BISWAS',
+      link: 'https://github.com/Suvanga/Application_Every_3_Days/blob/main/BISWAS/Readme.md',
+      demoLink: 'https://momentum.suvanga.com',
+      secondaryActionText: 'Try it',
       gradient: 'from-purple-600 to-pink-600',
       glowColor: 'rgba(147, 51, 234, 0.4)'
     },
@@ -48,6 +52,8 @@ export function EnhancedProjectsSection() {
       ],
       tags: ['Python', 'PyTorch', 'LLMs', 'Computer Vision', 'RAG', 'Healthcare AI'],
       link: 'https://github.com/Suvanga/deepcls',
+      demoLink: 'https://github.com/Suvanga/deepcls', // Update this if you have a live demo URL
+      secondaryActionText: 'View Workflow',
       gradient: 'from-blue-600 to-cyan-600',
       glowColor: 'rgba(59, 130, 246, 0.4)'
     },
@@ -64,11 +70,30 @@ export function EnhancedProjectsSection() {
       ],
       tags: ['IoT', 'C++', 'Cloud Integration', 'Real-Time Systems', 'Hardware'],
       link: 'https://github.com/Suvanga/Silent_Bell',
+      demoLink: 'https://www.youtube.com/shorts/BbaNTW-YIa0',
+      secondaryActionText: 'View Working Demo',
       gradient: 'from-orange-600 to-yellow-600',
       glowColor: 'rgba(249, 115, 22, 0.4)'
+    },
+    {
+      title: 'Mediscan App',
+      subtitle: 'AI-Powered X-Ray Diagnostics',
+      description: 'Intelligent medical imaging platform designed to process and analyze X-ray scans using machine learning models.',
+      icon: ShieldCheck, 
+      details: [
+        'Interactive frontend built to seamlessly upload and visualize medical imaging data',
+        'Integration of machine learning models for automated X-ray scan analysis and insights',
+        'Secure handling of image data with optimized processing pipelines',
+        'Responsive UI ensuring accessibility across different clinical devices'
+      ],
+      tags: ['React', 'Machine Learning', 'Healthcare AI', 'Medical Imaging'],
+      link: 'https://github.com/Suvanga/Mediscan',
+      demoLink: 'https://xray.suvanga.com',
+      secondaryActionText: 'Try it',
+      gradient: 'from-teal-500 to-emerald-500',
+      glowColor: 'rgba(20, 184, 166, 0.4)'
     }
   ];
-
   return (
     <section id="projects" className="py-24 px-4 sm:px-6 relative overflow-hidden">
       {/* Animated background elements */}
@@ -234,7 +259,7 @@ export function EnhancedProjectsSection() {
                         View Code
                       </motion.a>
                       <motion.a
-                        href={project.link}
+                        href={project.demoLink || project.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 px-6 py-3 bg-white/5 hover:bg-white/10 border border-white/20 text-gray-300 rounded-xl font-semibold"
@@ -242,10 +267,9 @@ export function EnhancedProjectsSection() {
                         whileTap={{ scale: 0.95 }}
                       >
                         <ExternalLink className="w-4 h-4" />
-                        Learn More
+                        {project.secondaryActionText}
                       </motion.a>
-                    </div>
-                  </div>
+                    </div>                 </div>
                 </motion.div>
               </motion.div>
             );
