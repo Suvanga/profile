@@ -4,8 +4,45 @@ import { ExternalLink, Github, Sparkles, DollarSign, TrendingUp, Brain, Bell, Sh
 import finalPresentation from '../assets/Final_presentation.pdf';
 import Final from '../assets/Final.pdf';
 import Working from '../assets/Working.png'
+
 export function EnhancedProjectsSection() {
  const projects = [
+  {
+      title: 'Momentum',
+      subtitle: 'AI-Powered Habit Intelligence',
+      description: 'Intelligent habit tracking app with AI-driven insights and personalized coaching features',
+      icon: TrendingUp,
+      details: [
+        'High-performance responsive UI built with React and Vite, pixel-perfect from Figma designs',
+        '"Growth Coach" feature leveraging OpenAI API for personalized habit insights',
+        'Interactive data visualization with completion rates and streak tracking',
+        'Optimized component re-renders and local storage for seamless UX'
+      ],
+      tags: ['React', 'Vite', 'OpenAI API', 'Data Visualization', 'Local Storage'],
+      link: 'https://github.com/Suvanga/Application_Every_3_Days/blob/main/BISWAS/Readme.md',
+      demoLink: 'https://momentum.suvanga.com',
+      secondaryActionText: 'Try it',
+      gradient: 'from-purple-600 to-pink-600',
+      glowColor: 'rgba(147, 51, 234, 0.4)'
+    },  
+    {
+      title: 'Mediscan App',
+      subtitle: 'AI-Powered X-Ray Diagnostics',
+      description: 'Intelligent medical imaging platform designed to process and analyze X-ray scans using machine learning models.',
+      icon: ShieldCheck, 
+      details: [
+        'Interactive frontend built to seamlessly upload and visualize medical imaging data',
+        'Integration of machine learning models for automated X-ray scan analysis and insights',
+        'Secure handling of image data with optimized processing pipelines',
+        'Responsive UI ensuring accessibility across different clinical devices'
+      ],
+      tags: ['React', 'Machine Learning', 'Healthcare AI', 'Medical Imaging'],
+      link: 'https://github.com/Suvanga/Mediscan',
+      demoLink: 'https://xrayai.suvanga.com',
+      secondaryActionText: 'Try it',
+      gradient: 'from-teal-500 to-emerald-500',
+      glowColor: 'rgba(20, 184, 166, 0.4)'
+    },
     {
       title: 'MoneyMate',
       subtitle: 'FinTech Data Pipeline with AI',
@@ -23,42 +60,6 @@ export function EnhancedProjectsSection() {
       secondaryActionText: 'View Final Project',
       gradient: 'from-green-600 to-emerald-600',
       glowColor: 'rgba(16, 185, 129, 0.4)'
-    },
-    {
-      title: 'Momentum',
-      subtitle: 'AI-Powered Habit Intelligence',
-      description: 'Intelligent habit tracking app with AI-driven insights and personalized coaching features',
-      icon: TrendingUp,
-      details: [
-        'High-performance responsive UI built with React and Vite, pixel-perfect from Figma designs',
-        '"Growth Coach" feature leveraging OpenAI API for personalized habit insights',
-        'Interactive data visualization with completion rates and streak tracking',
-        'Optimized component re-renders and local storage for seamless UX'
-      ],
-      tags: ['React', 'Vite', 'OpenAI API', 'Data Visualization', 'Local Storage'],
-      link: 'https://github.com/Suvanga/Application_Every_3_Days/blob/main/BISWAS/Readme.md',
-      demoLink: 'https://momentum.suvanga.com',
-      secondaryActionText: 'Try it',
-      gradient: 'from-purple-600 to-pink-600',
-      glowColor: 'rgba(147, 51, 234, 0.4)'
-    },
-    {
-      title: 'DeepCLS',
-      subtitle: 'Multimodal Cancer Detection AI',
-      description: 'Advanced multimodal system integrating Computer Vision and LLMs for cancer diagnostics',
-      icon: Brain,
-      details: [
-        'Hybrid AI pipeline combining CNN-based video classification with LLM clinical reasoning',
-        'RAG (Retrieval-Augmented Generation) for medical database integration',
-        'Multimodal pipeline with improved diagnostic consistency using vision-language models',
-        'Trained on annotated cancer cell datasets with optimized classification accuracy'
-      ],
-      tags: ['Python', 'PyTorch', 'LLMs', 'Computer Vision', 'RAG', 'Healthcare AI'],
-      link: 'https://github.com/Suvanga/deepcls',
-      demoLink: Working, 
-      secondaryActionText: 'View Workflow',
-      gradient: 'from-blue-600 to-cyan-600',
-      glowColor: 'rgba(59, 130, 246, 0.4)'
     },
     {
       title: 'SilBells',
@@ -79,23 +80,25 @@ export function EnhancedProjectsSection() {
       glowColor: 'rgba(249, 115, 22, 0.4)'
     },
     {
-      title: 'Mediscan App',
-      subtitle: 'AI-Powered X-Ray Diagnostics',
-      description: 'Intelligent medical imaging platform designed to process and analyze X-ray scans using machine learning models.',
-      icon: ShieldCheck, 
+      title: 'DeepCLS',
+      subtitle: 'Multimodal Cancer Detection AI',
+      description: 'Advanced multimodal system integrating Computer Vision and LLMs for cancer diagnostics',
+      icon: Brain,
       details: [
-        'Interactive frontend built to seamlessly upload and visualize medical imaging data',
-        'Integration of machine learning models for automated X-ray scan analysis and insights',
-        'Secure handling of image data with optimized processing pipelines',
-        'Responsive UI ensuring accessibility across different clinical devices'
+        'Hybrid AI pipeline combining CNN-based video classification with LLM clinical reasoning',
+        'RAG (Retrieval-Augmented Generation) for medical database integration',
+        'Multimodal pipeline with improved diagnostic consistency using vision-language models',
+        'Trained on annotated cancer cell datasets with optimized classification accuracy'
       ],
-      tags: ['React', 'Machine Learning', 'Healthcare AI', 'Medical Imaging'],
-      link: 'https://github.com/Suvanga/Mediscan',
-      demoLink: 'https://xrayai.suvanga.com',
-      secondaryActionText: 'Try it',
-      gradient: 'from-teal-500 to-emerald-500',
-      glowColor: 'rgba(20, 184, 166, 0.4)'
+      tags: ['Python', 'PyTorch', 'LLMs', 'Computer Vision', 'RAG', 'Healthcare AI'],
+      // Removing 'link' here to remove the "View Code" button
+      demoLink: Working, 
+      secondaryActionText: 'View Workflow',
+      gradient: 'from-blue-600 to-cyan-600',
+      glowColor: 'rgba(59, 130, 246, 0.4)'
     }
+    
+    
   ];
 
   return (
@@ -248,20 +251,23 @@ export function EnhancedProjectsSection() {
 
                     {/* Action buttons */}
                     <div className="flex gap-3">
-                      <motion.a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${project.gradient} text-white rounded-xl font-semibold`}
-                        whileHover={{
-                          scale: 1.05,
-                          boxShadow: `0 10px 30px ${project.glowColor}`
-                        }}
-                        whileTap={{ scale: 0.95 }}
-                      >
-                        <Github className="w-4 h-4" />
-                        View Code
-                      </motion.a>
+                      {/* Only render Github button if project.link exists */}
+                      {project.link && (
+                        <motion.a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${project.gradient} text-white rounded-xl font-semibold`}
+                          whileHover={{
+                            scale: 1.05,
+                            boxShadow: `0 10px 30px ${project.glowColor}`
+                          }}
+                          whileTap={{ scale: 0.95 }}
+                        >
+                          <Github className="w-4 h-4" />
+                          View Code
+                        </motion.a>
+                      )}
                       <motion.a
                         href={project.demoLink || project.link}
                         target="_blank"
